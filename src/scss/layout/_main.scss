@@ -1,0 +1,215 @@
+.site-main {
+    background-color: $white;
+    padding: calc(20px + 1vw) 0;
+    .section-experiencias {
+        padding: $paddingSection;
+        .titulo {
+            text-align: center;
+            @include title;
+            max-width: 20ch;
+            padding: .5em 0 1em 0;
+  
+            margin: 0 auto
+        }
+
+        .cards-grid {
+            @include grid(3, 1.5em);
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+    }
+
+    .card-experiencia {
+        @include flex(column);
+        align-items: center;
+        width: 100%;
+        max-height: 1150px;
+        border-radius: 500px 500px 0 0;
+        .experiencia-img {
+            overflow: hidden;
+           height: 650px;
+            border-radius: 500px 500px 0 0;
+     
+ 
+            img {
+                transition: transform .3s ease;
+                width: 100%;
+                object-fit: cover;
+    
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .experiencia-text {
+            color: $primary-dark;
+
+            p {
+                padding: .8em 0;
+                font-size: 1.6rem;
+                line-height: 115%;
+                font-weight:bold;
+            }
+            span {
+                font-size: 1.3rem;
+                line-height: 139%;
+            }
+        }
+    }
+}
+
+.section-news {
+     padding: $paddingBig 20px;
+     min-height: 100vh;
+     position: relative;
+     overflow-x: hidden;
+     .news-circle {
+         width: 530px;
+         height: 530px;
+         background-color: $primary-dark;
+         display: block;
+         border-radius: 100%;
+         position: absolute;
+         right: 0;
+         left: 88%;
+     }
+    .news-grid {
+        display: grid;
+        min-height: 100vh;
+        grid-template-columns: 65% 35%;
+        position: relative;
+        .news-text {
+            h2 {
+                @include title;
+
+            }
+            p {
+                padding: $paddingParrafo;
+                font-size: 1.3rem;
+            }
+            .news-img {
+                img {
+                    width: 100%;
+                    max-width: 57vw;
+                    max-height: 720px;
+                    border-radius: 0% 0% 0% 90%;
+                     padding: $paddingSection 0 0 0;
+                }
+            }
+            .trabajando-desde {
+                position: absolute;
+                top: 59%;
+                bottom: 0;
+                right: 0;
+                left: 38%;
+                text-shadow: 3px 3px 3px white;
+                 @include titleSmall;
+            }
+        }
+        .news-ul {
+            @include flex(column);
+            align-items: flex-end;
+            justify-content: flex-end;
+            ul {
+                @include flex(column);
+               
+                 gap: .8em;
+                 li {
+                     font-size: 1.4rem;
+                 }
+           
+            }
+        }
+    }
+}
+
+.section-places {
+    background: linear-gradient(to right, #00000098, #00000093),
+    url(../../Imágenes/Subidas/Postlaguna.JPG);
+    min-height: 100vh;
+    @include background;
+
+    .places-title {
+      color: white;
+      padding: 2% 0;
+      h3 {
+          @include title;
+          color: white
+      }
+      p {
+          @include parrafoBig;
+      }
+    }
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+
+        padding: 2% 0 2% 5%;
+        @media screen and(max-width: 600px) {
+            padding: 2% 2em;
+        }
+    }
+
+    .place-card {
+        &:nth-child(1) img {
+            border-radius: 90px 0 0 0;
+        }
+        &:nth-child(2) img {
+            border-radius: 0 0 0 90px;
+        }
+        &:nth-child(3) img {
+            border-radius: 0 90px 0 0;
+        }
+        &:nth-child(4) img {
+            border-radius: 0 0 90px 0;
+        }
+        &:nth-child(5) img {
+           border-radius: 90px 0 0 0;
+        }
+        &:nth-child(6) img {
+           border-radius: 0 0 0 90px;
+        }
+        transition: all .5s ease;
+        &:hover {
+            transform: scale(1.04);
+            .place-title {
+                h4 {
+                    transform: translateX(-6px) scale(1.06);
+       
+                }
+            }
+        }
+        .place-img {
+           position: relative;
+            img {
+                max-width: 430px;
+                object-fit: cover;
+                aspect-ratio: 1 / 2;
+                max-height: 550px;
+                @media screen and(max-width: 600px) {
+                    max-width: 100%;
+                    max-height: 480px;
+                }
+            }
+        }
+
+        .place-title {
+            h4 {
+                transition: all .5s ease;
+                @include titleSmall;
+                color: white;
+                position: absolute;
+                top: 84%;
+                left: -4%;
+                @media screen and(max-width: 600px) {
+                    right: 0;
+                    top: 90%;
+                    left: 2%;
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,57 @@
+$primary: #00A6EC;
+$primary-dark: #01212f;
+$secondary: #01038d;
+$white :#faf8f4;
+$paddingSection: calc(20px + 1vw);
+$paddingBig: calc(10rem + 1vw);
+$paddingParrafo: .8em 0;
+
+@mixin flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+
+}
+
+@mixin grid($columns, $gap) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $gap;
+    place-content: center;
+}
+
+@mixin title {
+    font-size: 3.6rem;
+    font-weight: 900;
+    color: $primary-dark;
+    line-height: 45px;
+    line-height: 115%;
+}
+@mixin titleSmall {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: $primary-dark;
+    line-height: 45px;
+    line-height: 115%;
+}
+
+@mixin button($background, $color) {
+    padding: .5em 1em;
+    text-align: center;
+    background-color: $background;
+    color: $color;
+    border: 6px solid transparent;
+    border-radius: 1px;
+}
+
+@mixin parrafoBig {
+    padding: .8em 0;
+    font-size: 1.6rem;
+    line-height: 115%;
+    font-weight:bold;
+}
+
+@mixin background {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

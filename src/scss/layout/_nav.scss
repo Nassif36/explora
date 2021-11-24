@@ -1,0 +1,37 @@
+.site-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+    padding: 2em 1em;
+    .logo {
+
+        .logo-img {
+            width: 55px;
+            height: 55px;
+            background-color: rgba(0, 0, 0, 0.842);
+            border-radius: 33px;
+        }
+    }
+    .navigation-links {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-basis: 65%;
+        gap: 3.6%;
+        li {
+             a {
+                 color: white;
+             }
+             .btn-white {
+                 color: black;
+             }
+        }
+       
+    }
+}
+
+.btn-white {
+    @include button(white, black);
+}
