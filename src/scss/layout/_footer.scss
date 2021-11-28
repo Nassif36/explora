@@ -1,0 +1,55 @@
+.site-footer {
+    background-color: $white;
+    padding: 2% 0;
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 40% 20% 20% 20%;
+
+        max-width: 70vw;
+        margin: 0 auto;
+        gap: 3%;
+        min-height: 45vh;
+
+        .footer-col-big {
+            @include flex(column);
+            align-items: center;
+            justify-content: center;
+            max-width: max-content;
+
+            p {
+                max-width: 40ch;
+                font-size: .9rem;
+                text-align: left
+            }
+            .footer-redes {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 2em;
+                padding: .5em 0;
+                width: 100%;
+                i {
+                    color: $black;
+                    font-size: 1.3rem;
+                }
+            }
+        }
+
+        .footer-col {
+            @include flex(column);
+            align-items: flex-start;
+  
+            h4 {
+                @include parrafoBig;
+            }
+        }
+    }
+
+    span {
+        @include flex(row);
+        justify-content: center;
+        align-items: center;
+        padding: 5% 0;
+    }
+}

@@ -2,36 +2,68 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    transition: all .8s ease;
     z-index: 10;
-    padding: 2em 1em;
+    margin: 1em 0;
+    padding: 2em 6.2%;
+
     .logo {
 
         .logo-img {
             width: 55px;
             height: 55px;
-            background-color: rgba(0, 0, 0, 0.842);
-            border-radius: 33px;
+            background-color: #fffafad7;
+            border-radius: 3px;
         }
     }
+
+    &.nav-scrolled {
+        position: fixed;
+        top: 0;
+        margin: 0;
+        background-color: $white;
+        padding: 1em 6.2%;
+        box-shadow: 2px 2px 2px #00000046;
+
+        .navigation-links {
+            li {
+                a {
+                    color: black;
+                }
+
+                .btn-white {
+                    color: $white;
+                    background-color: $primary-dark;
+                }
+            }
+
+        }
+    }
+
     .navigation-links {
         display: flex;
         justify-content: flex-end;
         align-items: center;
         flex-basis: 65%;
         gap: 3.6%;
+
         li {
-             a {
-                 color: white;
-             }
-             .btn-white {
-                 color: black;
-             }
+            a {
+                color: $white;
+            }
+
+            .btn-white {
+                color: black;
+            }
         }
-       
+
     }
 }
 
 .btn-white {
-    @include button(white, black);
+    @include button($white, black);
 }

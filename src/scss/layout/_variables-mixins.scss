@@ -1,10 +1,18 @@
+
+// Colores
 $primary: #00A6EC;
-$primary-dark: #01212f;
+$primary-dark: #022838;
 $secondary: #01038d;
 $white :#faf8f4;
+$black: #141414;
+
+// Paddings
 $paddingSection: calc(20px + 1vw);
 $paddingBig: calc(10rem + 1vw);
 $paddingParrafo: .8em 0;
+
+// Font sizes 
+$fontNormal:  1.3rem;
 
 @mixin flex($direction) {
     display: flex;
@@ -55,3 +63,4 @@ $paddingParrafo: .8em 0;
     background-repeat: no-repeat;
     background-position: center;
 }
+
