@@ -22,19 +22,35 @@
              .hero-frase {
                 padding: 0 6% 6% 6%;
                  color: $white;
-              
+                position: relative;
+                z-index: 4;
                 
              }
            
              .hero-video {
-                 flex-basis: 50%;
+                //  flex-basis: 50%;
+                    &::after {
+                        content: '';
+                        display: block;
+                        background: linear-gradient(to right, #000000a6 50%, transparent 0);
+                        top: 0;
+                        right: 0;
+                        left: 0;
+                        position: absolute;
+                        height: 100vh;
+                   
+                        z-index: 3;
+                    }
+                position: absolute;
+                inset: 0;
                  video {
                      width: 100%;
-                     max-width: 50vw;
-                     position: absolute;
-                     right: 0;
-                     bottom: 0;
-                     top: 0;
+                    //  max-width: 50vw;
+                    //  position: absolute;
+                    //  right: 0;
+                    //  bottom: 0;
+                    
+                    //  top: 0;
                      display: block;
                      height: 100%;
                      object-fit: cover;

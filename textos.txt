@@ -1,19 +1,19 @@
 HEADER 
 
 
-- liderazgo y trabajo en equipo
+- liderazgo y trabajo en equipo leadership and teamwork
 
-- conservacion del medio ambiente
+- conservacion del medio ambiente 
 
 - seguridad y evaluación del riesgo 
 ---------------------------------------
 // escuelas
 
-- te ofrecemos experiencias unicas (3 cards)
+- te ofrecemos experiencias unicas (3 cards) PROGRAMS
 
-- card 1
-- card 2
-- card 3
+- formative 
+- adventure
+- expedition
 
 --------------------------------------------
 // a dónde vas a ir

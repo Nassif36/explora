@@ -40,7 +40,7 @@ button {
   font-size: .9rem; }
 
 h1 {
-  font-size: calc(2.8rem + 1vw);
+  font-size: calc(2.7rem + 1vw);
   max-width: 18ch;
   text-transform: uppercase; }
 
@@ -125,16 +125,24 @@ span {
       min-height: 100vh; }
       .site-header .site-hero .site-hero-flex .hero-frase {
         padding: 0 6% 6% 6%;
-        color: #faf8f4; }
+        color: #faf8f4;
+        position: relative;
+        z-index: 4; }
       .site-header .site-hero .site-hero-flex .hero-video {
-        flex-basis: 50%; }
+        position: absolute;
+        inset: 0; }
+        .site-header .site-hero .site-hero-flex .hero-video::after {
+          content: '';
+          display: block;
+          background: linear-gradient(to right, #000000a6 50%, transparent 0);
+          top: 0;
+          right: 0;
+          left: 0;
+          position: absolute;
+          height: 100vh;
+          z-index: 3; }
         .site-header .site-hero .site-hero-flex .hero-video video {
           width: 100%;
-          max-width: 50vw;
-          position: absolute;
-          right: 0;
-          bottom: 0;
-          top: 0;
           display: block;
           height: 100%;
           object-fit: cover; }
