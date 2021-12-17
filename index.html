@@ -23,17 +23,25 @@
 
 <body>
     <span class="reembolsable">reembolsable al 100% si cancelamos tu viaje por COVID-19</span>
-    <header class="site-header">
+    <header class="site-header home">
 
         <nav class="site-navigation" id="barra">
             <div class="logo">
-                <div class="logo-img"></div>
+                <a href="index.html" class="logo-img"></a>
+                <div class="open-btn" id="menu-open">
+                    <div class="bar bar-1"></div>
+                    <div class="bar bar-2"></div>
+                    <div class="bar bar-3"></div>
+                </div>
             </div>
-            <ul class="navigation-links">
-                <li><a href="#">programas</a></li>
-                <li><a href="#">¿quienes somos?</a></li>
+            <ul class="navigation-links modal">
+                <div class="close-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+                <li><a href="programas.html">Programas</a></li>
+                <li><a href="quienes-somos.html">¿Quienes Somos?</a></li>
 
-                <li><a href="#" class="btn-white">contacto</a></li>
+                <li><a href="#" class="btn-white">Contacto</a></li>
             </ul>
 
         </nav>
@@ -54,7 +62,9 @@
             </div>
         </article>
     </header>
+
     <main class="site-main">
+        
         <section class="section-experiencias">
             <h2 class="titulo" >
                 Te ofrecemos experiencias unicas.
@@ -110,7 +120,7 @@
             <div class="news-grid contenedor-1">
                 <article class="news-text">
                     <div class="line">
-                        <h2 class="mask-up" id="news-text">
+                        <h2 class="mask-up" >
                             Huge news! We've just become the world's first climate positive school travel company.
                         </h2>
                     </div>
@@ -217,6 +227,45 @@
 
             </div>
         </div>
+    </section>
+    <section class="section-contact">
+        <article class="contact-flex">
+           
+            <div class="contact-form">
+                <form action="#">
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" >
+                    </div>
+                    <div class="campo">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" name="apellido" >
+                    </div>
+                    <div class="campo">
+                        <label for="numero">Número de teléfono</label>
+                        <input type="number" name="numero" >
+                    </div>
+                    <div class="campo">
+                        <label for="email">Email</label>
+                        <input type="email" name="email">
+                    </div>
+                    <div class="campo">
+                        <label for="email">Mensaje</label>
+                        <input type="email" name="email">
+                    </div>
+                    <div class="campo">
+                        <label for="email">Nombre de la escuela</label>
+                        <textarea name="mensaje"></textarea>
+                    </div>
+                   <div class="campo-btn">
+                        <button class="btn-enviar">Enviar</button>
+                   </div>
+                </form>
+            </div>
+             <div class="contact-img">
+                 <img src="./src/Imágenes/_EHL8241.jpg" alt="">
+             </div>
+        </article>
     </section>
     <footer class="site-footer">
         <div class="footer-grid">

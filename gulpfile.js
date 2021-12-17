@@ -13,6 +13,7 @@ const bundleSass = () => {
 
 function minificarcss() {
     return src('src/scss/app.scss')
+    return src('src/scss/appSecondary.scss')
         .pipe(compileSass({
             outputStyle: 'compressed'
         }))
@@ -20,7 +21,7 @@ function minificarcss() {
 };
 
 const devWatch = () => {
-    watch('src/scss/*.scss', bundleSass);
+    watch('src/scss/layout/*.scss', bundleSass);
 };
 
 exports.minificarcss = minificarcss;

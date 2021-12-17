@@ -1,0 +1,347 @@
+.programs {
+    display: grid;
+    min-height: 80vh;
+    width: 100%;
+    place-content: center;
+
+    h1 {
+        font-size: 12vw;
+        letter-spacing: -20px;
+        color: $white;
+
+        @media screen and(max-width: 1050px) {
+            letter-spacing: normal;
+        }
+    }
+}
+
+.main-programs {
+    .programs-intro {
+        @include flex(column);
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 90vh;
+
+        .icon {
+            i {
+                font-size: 4.3rem;
+                color: $green;
+            }
+        }
+
+        .programs-text {
+            color: $green;
+
+            h2 {
+
+                max-width: 25ch;
+                @include title;
+                color: $green;
+                margin: 0 auto;
+                padding: .5em 0;
+            }
+
+            p {
+                max-width: 75ch;
+                font-weight: 700;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+.programs-what,
+.programs-why,
+.quienes-somos-history,
+.quienes-somos-intro,
+.quienes-somos-world {
+    @include flex(row);
+    align-items: center;
+    justify-content: center;
+    padding: $paddingSection;
+    gap: 6em;
+    flex-wrap: wrap;
+     @media screen and(max-width: 768px) {
+         gap: 1em;
+     }
+    .what-image,
+    .why-image,
+    .history-img,
+    .quienes-somos-img,
+    .world-img{
+        width: 100%;
+        flex-basis: 35%;
+
+        @media screen and(max-width: 1050px) {
+            flex-basis: 50%;
+        }
+
+        @media screen and(max-width: 768px) {
+            flex-basis: 100%;
+        }
+
+        img {
+            border-radius: 1000px 1000px 1000px 1000px;
+            width: 100%;
+            max-height: 850px;
+            max-width: 660px;
+            aspect-ratio: 2 / 3;
+            object-fit: cover;
+
+        }
+    }
+.quienes-somos-img {
+    position: relative;
+    img {
+        border-radius: 3px;
+        position: relative;
+        z-index: 6;
+    }
+    &:after {
+        content: '';
+        display: block;
+        background-color: (lighten($color: $primary-dark, $amount: 80));
+        inset: 0;
+       
+        top: 3%;
+         left:3%;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+}
+    .what-text,
+    .why-text,
+    .history-text,
+    .quienes-somos-text,
+    .world-text {
+        flex-basis: 36%;
+        @include flex(column);
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 4em;
+        color: $green;
+        
+        h2 {
+            @include title;
+            color: $green;
+        }
+
+        p {
+            @include parrafoBig;
+            font-weight: 300;
+        }
+
+        ul {
+            @include flex(column);
+            gap: .8em;
+
+            li {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media screen and(max-width: 768px) {
+            flex-basis: 100%;
+            gap: 1em;
+            justify-content: center;
+            padding: 2em 0;
+        }
+    }
+}
+
+.programs-why {
+    background: $white-dark;
+
+    .why-image {
+        img {
+            border-radius: 0 0 360px 0;
+
+        }
+    }
+
+}
+.reverse {
+    @media screen and(max-width: 768px) {
+        flex-direction: column-reverse;
+    }
+}
+
+.programs-how {
+    @include flex(row);
+    align-items: center;
+    justify-content: center;
+    padding: 9rem;
+    background: $white-dark;
+    gap: 12em;
+    color: $green;
+
+    @media screen and(max-width:1200px) {
+        padding: 2rem;
+    }
+
+    @media screen and(max-width:768px) {
+        flex-direction: column;
+    }
+
+    .how-half {
+        @include flex(column);
+
+        .how-img {
+            img {
+                width: 100%;
+                max-width: 750px;
+                height: 100%;
+                display: block;
+                min-height: 600px;
+                border-radius: 0px 700px 0px 0px;
+            }
+        }
+
+        .how-list {
+            ul {
+                @include flex(column);
+                padding: 4em 0;
+                gap: .3em;
+                max-width: 500px;
+
+                li {
+                    font-size: 1.3rem;
+                    border-bottom: 1px solid $primary-dark;
+                    padding: .8em;
+
+
+                }
+            }
+        }
+    }
+
+    .how-half-2 {
+        @include flex(column);
+
+        @media screen and(max-width:768px) {
+            width: 100%;
+        }
+
+        .how-img {
+            padding: 2em 0 0 0;
+
+            img {
+                width: 100%;
+                max-width: 400px;
+                aspect-ratio: 1/ 2;
+                height: 100%;
+                max-height: 550px;
+                object-fit: cover;
+
+                @media screen and(max-width:768px) {
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .how-text {
+            p {
+
+                @include parrafoBig;
+                font-weight: 300;
+                max-width: 30ch;
+
+                @media screen and(max-width:768px) {
+                    max-width: 60ch;
+                }
+            }
+
+            h3 {
+                @include title;
+                color: $green;
+            }
+        }
+    }
+}
+
+/** nosotros **/
+.nosotros {
+    @include flex(column);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: right;
+    
+    .nosotros-img {
+        @include flex(column);
+        width: 100%;
+        align-items: center;
+        position: relative;
+        text-align: center;
+
+        h1 {
+            position: absolute;
+            bottom: 68%;
+            @include title;
+            font-size: 6vw;
+            letter-spacing: -5px;
+            color: $white;
+        }
+
+        img {
+            width: 100%;
+            max-width: 90vw;
+
+            object-fit: cover;
+            max-height: 70vh;
+            margin: 0 auto;
+            margin-top: 10%;
+        }
+    }
+
+    span {
+        width: 100%;
+        max-width: 90vw;
+        color: $white;
+        padding: 1em 0;
+    }
+
+}
+.main-quienes-somos {
+    color: $primary-dark
+}
+.quienes-somos-texto {
+
+    h3 {
+        @include parrafoBig;
+    }
+    p {
+        max-width: 45ch;
+        font-size: 1.3rem;
+        padding: .8em 0;
+        font-weight: 300;
+     
+        
+    }
+}
+.quienes-somos-history {
+       
+    .history-text,
+    .world-text {
+        h2 {
+             color: $primary-dark;
+             text-transform: uppercase;
+        }
+        color: $primary-dark;
+    }
+}
+.quienes-somos-world {
+    background-color: darken($color: $white-dark, $amount: 3);
+    .world-text {
+        color: $primary-dark;
+        h2 {
+            color: $primary-dark;
+            text-transform: uppercase;
+        }
+        p {
+            padding: 0;
+        }
+    }
+}

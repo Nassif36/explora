@@ -4,7 +4,9 @@ $primary: #00A6EC;
 $primary-dark: #022838;
 $secondary: #01038d;
 $white :#faf8f4;
+$white-dark: #FFFEF6;
 $black: #141414;
+$green: #055E5A;
 
 // Paddings
 $paddingSection: calc(20px + 1vw);
@@ -28,11 +30,14 @@ $fontNormal:  1.3rem;
 }
 
 @mixin title {
-    font-size: 3.6rem;
+    font-size: 3.3rem;
     font-weight: 900;
     color: $primary-dark;
     line-height: 45px;
     line-height: 115%;
+    @media screen and(max-width: 850px) {
+        font-size: 2.3rem;
+    }
 }
 @mixin titleSmall {
     font-size: 1.8rem;
@@ -40,6 +45,9 @@ $fontNormal:  1.3rem;
     color: $primary-dark;
     line-height: 45px;
     line-height: 115%;
+    @media screen and(max-width: 850px) {
+        font-size: 1.3rem;
+    }
 }
 
 @mixin button($background, $color) {
@@ -56,6 +64,9 @@ $fontNormal:  1.3rem;
     font-size: 1.6rem;
     line-height: 115%;
     font-weight:bold;
+    @media screen and(max-width: 850px) {
+        font-size: 1.1rem;
+    }
 }
 
 @mixin background {

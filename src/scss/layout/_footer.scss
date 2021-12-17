@@ -10,7 +10,12 @@
         margin: 0 auto;
         gap: 3%;
         min-height: 45vh;
-
+        @media screen and(max-width: 768px) {
+            grid-template-columns: 1fr;
+            place-content: start;
+            margin: 0;
+            padding: 2em;
+        }
         .footer-col-big {
             @include flex(column);
             align-items: center;
@@ -42,6 +47,9 @@
   
             h4 {
                 @include parrafoBig;
+            }
+            a {
+                color: $primary-dark
             }
         }
     }

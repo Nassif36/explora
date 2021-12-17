@@ -1,0 +1,913 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  scroll-behavior: smooth; }
+
+img {
+  width: 100%;
+  display: block;
+  height: 100%; }
+
+body {
+  font-family: 'Josefin Sans', sans-serif; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  font-size: clamp(1rem, 1.1rem, 1.3rem);
+  cursor: pointer; }
+
+input,
+button,
+textarea {
+  border: none;
+  outline: none;
+  cursor: pointer; }
+
+button {
+  padding: .9rem 1.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: max-content;
+  font-weight: 600;
+  font-size: .9rem; }
+
+h1 {
+  font-size: calc(2.2rem + 1vw);
+  max-width: 18ch;
+  text-transform: uppercase; }
+
+p,
+span {
+  font-size: clamp(0.8rem, 1rem, 1.1rem); }
+
+.reembolsable {
+  background-color: #022838;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  padding: .2em 0;
+  text-align: center;
+  max-width: 0 auto;
+  color: #fffffff6;
+  text-transform: uppercase;
+  font-size: clamp(0.6rem, 0.8rem, 0.9rem); }
+
+.contenedor-1 {
+  max-width: 90vw;
+  margin: 0 auto; }
+
+/** intersection animations **/
+@media (min-width: 950px) {
+  .from-up,
+  .from-down {
+    transition: all 1.4s ease;
+    opacity: 0; }
+  .from-up {
+    transform: translateY(-10%); }
+  .from-down {
+    transform: translateY(10%); }
+  .from-up.appear,
+  .from-down.appear {
+    transform: translateY(0);
+    opacity: 1; }
+  .from-right,
+  .from-left {
+    transition: transform 1.4s ease, opacity 1.5s ease-in-out;
+    opacity: 0; }
+  .from-right {
+    transform: translateX(10%); }
+  .from-left {
+    transform: translateX(-10%); }
+  .from-left.appear,
+  .from-right.appear {
+    transform: translateX(0);
+    opacity: 1; } }
+
+.mask-up {
+  transform: translateY(100%);
+  transition: all 1.2s ease; }
+  .mask-up.appear {
+    transform: translateY(0); }
+
+.line {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  line-height: 1.3;
+  transition: all .8s ease;
+  margin-bottom: -.3rem; }
+  .line.maskup {
+    display: inline-block;
+    font-style: inherit;
+    will-change: transform; }
+
+.site-header {
+  min-height: 100vh;
+  position: relative; }
+  .site-header.home {
+    background-color: #022838; }
+  .site-header.programas {
+    background-color: #b4b4b4;
+    background: linear-gradient(to bottom, #00000088, #fffffff8), url("/src/Imágenes/DSCF7626.JPG");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .site-header.nosotros {
+    background-color: #022838; }
+
+.btn-outline {
+  width: 100%;
+  padding: .5em 1em;
+  text-align: center;
+  background-color: transparent;
+  color: #faf8f4;
+  border: 6px solid transparent;
+  border-radius: 1px;
+  border: 4px solid #faf8f4;
+  max-width: 200px;
+  padding: .7em 1.4em;
+  text-transform: uppercase; }
+
+.site-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition: all .8s ease;
+  z-index: 10;
+  padding: 0 6.2%; }
+  .site-navigation .logo {
+    padding: 4em 0; }
+    .site-navigation .logo .logo-img {
+      display: block;
+      width: 55px;
+      height: 55px;
+      background-color: #fffafad7;
+      border-radius: 33px; }
+    .site-navigation .logo .open-btn {
+      display: none; }
+  .site-navigation.fixed {
+    padding: 0 6.2%; }
+    .site-navigation.fixed .logo {
+      padding: 1em 0; }
+  .site-navigation.nav-scrolled {
+    top: 0;
+    margin: 0;
+    background-color: #faf8f4;
+    padding: 0 6.2%;
+    box-shadow: 2px 2px 2px #00000046; }
+    .site-navigation.nav-scrolled .navigation-links {
+      padding: 0; }
+      .site-navigation.nav-scrolled .navigation-links li a {
+        color: black; }
+      .site-navigation.nav-scrolled .navigation-links li .btn-white {
+        color: #faf8f4;
+        background-color: #022838; }
+  .site-navigation .navigation-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex-basis: 65%;
+    padding: 1em 0;
+    gap: 3.6%; }
+    @media screen and (max-width: 850px) {
+      .site-navigation .navigation-links {
+        transform: translateX(250%);
+        transition: all .8s;
+        transition-delay: .1s; }
+        .site-navigation .navigation-links.modal {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          position: fixed;
+          inset: 0;
+          padding: 13%;
+          background-color: #022838;
+          gap: 2em; }
+          .site-navigation .navigation-links.modal li a {
+            font-weight: 900;
+            text-transform: capitalize; }
+          .site-navigation .navigation-links.modal .close-btn {
+            align-self: flex-end;
+            justify-content: flex-end;
+            display: block; }
+            .site-navigation .navigation-links.modal .close-btn i {
+              color: red;
+              font-size: 2rem; }
+        .site-navigation .navigation-links.opened {
+          transform: translateX(0); } }
+    .site-navigation .navigation-links li a {
+      color: #faf8f4; }
+    .site-navigation .navigation-links li .btn-white {
+      color: black; }
+  @media screen and (max-width: 850px) {
+    .site-navigation {
+      flex-direction: column;
+      padding: 2em 0; }
+      .site-navigation .logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1.5em; }
+        .site-navigation .logo .open-btn {
+          display: block;
+          align-self: center;
+          justify-self: flex-end; }
+          .site-navigation .logo .open-btn .bar {
+            display: block;
+            background-color: white;
+            height: 2px;
+            width: 30px;
+            margin: .5em 0; } }
+  .site-navigation.opened .open-btn .bar-1,
+  .site-navigation.opened .open-btn .bar-3 {
+    transition: all .3s ease; }
+  .site-navigation.opened .open-btn .bar-1 {
+    transform: translateY(0.6em); }
+  .site-navigation.opened .open-btn .bar-3 {
+    transform: translateY(-0.6em); }
+
+.close-btn {
+  display: none; }
+
+@media screen and (max-width: 850px) {
+  .site-navigation {
+    padding: 0; } }
+
+.btn-white {
+  padding: .5em 1em;
+  text-align: center;
+  background-color: #faf8f4;
+  color: black;
+  border: 6px solid transparent;
+  border-radius: 1px; }
+
+.programs {
+  display: grid;
+  min-height: 80vh;
+  width: 100%;
+  place-content: center; }
+  .programs h1 {
+    font-size: 12vw;
+    letter-spacing: -20px;
+    color: #faf8f4; }
+    @media screen and (max-width: 1050px) {
+      .programs h1 {
+        letter-spacing: normal; } }
+
+.main-programs .programs-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 90vh; }
+  .main-programs .programs-intro .icon i {
+    font-size: 4.3rem;
+    color: #055E5A; }
+  .main-programs .programs-intro .programs-text {
+    color: #055E5A; }
+    .main-programs .programs-intro .programs-text h2 {
+      max-width: 25ch;
+      font-size: 3.3rem;
+      font-weight: 900;
+      color: #022838;
+      line-height: 45px;
+      line-height: 115%;
+      color: #055E5A;
+      margin: 0 auto;
+      padding: .5em 0; }
+      @media screen and (max-width: 850px) {
+        .main-programs .programs-intro .programs-text h2 {
+          font-size: 2.3rem; } }
+    .main-programs .programs-intro .programs-text p {
+      max-width: 75ch;
+      font-weight: 700;
+      margin: 0 auto; }
+
+.programs-what,
+.programs-why,
+.quienes-somos-history,
+.quienes-somos-intro,
+.quienes-somos-world {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: calc(20px + 1vw);
+  gap: 6em;
+  flex-wrap: wrap; }
+  @media screen and (max-width: 768px) {
+    .programs-what,
+    .programs-why,
+    .quienes-somos-history,
+    .quienes-somos-intro,
+    .quienes-somos-world {
+      gap: 1em; } }
+  .programs-what .what-image,
+  .programs-what .why-image,
+  .programs-what .history-img,
+  .programs-what .quienes-somos-img,
+  .programs-what .world-img,
+  .programs-why .what-image,
+  .programs-why .why-image,
+  .programs-why .history-img,
+  .programs-why .quienes-somos-img,
+  .programs-why .world-img,
+  .quienes-somos-history .what-image,
+  .quienes-somos-history .why-image,
+  .quienes-somos-history .history-img,
+  .quienes-somos-history .quienes-somos-img,
+  .quienes-somos-history .world-img,
+  .quienes-somos-intro .what-image,
+  .quienes-somos-intro .why-image,
+  .quienes-somos-intro .history-img,
+  .quienes-somos-intro .quienes-somos-img,
+  .quienes-somos-intro .world-img,
+  .quienes-somos-world .what-image,
+  .quienes-somos-world .why-image,
+  .quienes-somos-world .history-img,
+  .quienes-somos-world .quienes-somos-img,
+  .quienes-somos-world .world-img {
+    width: 100%;
+    flex-basis: 35%; }
+    @media screen and (max-width: 1050px) {
+      .programs-what .what-image,
+      .programs-what .why-image,
+      .programs-what .history-img,
+      .programs-what .quienes-somos-img,
+      .programs-what .world-img,
+      .programs-why .what-image,
+      .programs-why .why-image,
+      .programs-why .history-img,
+      .programs-why .quienes-somos-img,
+      .programs-why .world-img,
+      .quienes-somos-history .what-image,
+      .quienes-somos-history .why-image,
+      .quienes-somos-history .history-img,
+      .quienes-somos-history .quienes-somos-img,
+      .quienes-somos-history .world-img,
+      .quienes-somos-intro .what-image,
+      .quienes-somos-intro .why-image,
+      .quienes-somos-intro .history-img,
+      .quienes-somos-intro .quienes-somos-img,
+      .quienes-somos-intro .world-img,
+      .quienes-somos-world .what-image,
+      .quienes-somos-world .why-image,
+      .quienes-somos-world .history-img,
+      .quienes-somos-world .quienes-somos-img,
+      .quienes-somos-world .world-img {
+        flex-basis: 50%; } }
+    @media screen and (max-width: 768px) {
+      .programs-what .what-image,
+      .programs-what .why-image,
+      .programs-what .history-img,
+      .programs-what .quienes-somos-img,
+      .programs-what .world-img,
+      .programs-why .what-image,
+      .programs-why .why-image,
+      .programs-why .history-img,
+      .programs-why .quienes-somos-img,
+      .programs-why .world-img,
+      .quienes-somos-history .what-image,
+      .quienes-somos-history .why-image,
+      .quienes-somos-history .history-img,
+      .quienes-somos-history .quienes-somos-img,
+      .quienes-somos-history .world-img,
+      .quienes-somos-intro .what-image,
+      .quienes-somos-intro .why-image,
+      .quienes-somos-intro .history-img,
+      .quienes-somos-intro .quienes-somos-img,
+      .quienes-somos-intro .world-img,
+      .quienes-somos-world .what-image,
+      .quienes-somos-world .why-image,
+      .quienes-somos-world .history-img,
+      .quienes-somos-world .quienes-somos-img,
+      .quienes-somos-world .world-img {
+        flex-basis: 100%; } }
+    .programs-what .what-image img,
+    .programs-what .why-image img,
+    .programs-what .history-img img,
+    .programs-what .quienes-somos-img img,
+    .programs-what .world-img img,
+    .programs-why .what-image img,
+    .programs-why .why-image img,
+    .programs-why .history-img img,
+    .programs-why .quienes-somos-img img,
+    .programs-why .world-img img,
+    .quienes-somos-history .what-image img,
+    .quienes-somos-history .why-image img,
+    .quienes-somos-history .history-img img,
+    .quienes-somos-history .quienes-somos-img img,
+    .quienes-somos-history .world-img img,
+    .quienes-somos-intro .what-image img,
+    .quienes-somos-intro .why-image img,
+    .quienes-somos-intro .history-img img,
+    .quienes-somos-intro .quienes-somos-img img,
+    .quienes-somos-intro .world-img img,
+    .quienes-somos-world .what-image img,
+    .quienes-somos-world .why-image img,
+    .quienes-somos-world .history-img img,
+    .quienes-somos-world .quienes-somos-img img,
+    .quienes-somos-world .world-img img {
+      border-radius: 1000px 1000px 1000px 1000px;
+      width: 100%;
+      max-height: 850px;
+      max-width: 660px;
+      aspect-ratio: 2 / 3;
+      object-fit: cover; }
+  .programs-what .quienes-somos-img,
+  .programs-why .quienes-somos-img,
+  .quienes-somos-history .quienes-somos-img,
+  .quienes-somos-intro .quienes-somos-img,
+  .quienes-somos-world .quienes-somos-img {
+    position: relative; }
+    .programs-what .quienes-somos-img img,
+    .programs-why .quienes-somos-img img,
+    .quienes-somos-history .quienes-somos-img img,
+    .quienes-somos-intro .quienes-somos-img img,
+    .quienes-somos-world .quienes-somos-img img {
+      border-radius: 3px;
+      position: relative;
+      z-index: 6; }
+    .programs-what .quienes-somos-img:after,
+    .programs-why .quienes-somos-img:after,
+    .quienes-somos-history .quienes-somos-img:after,
+    .quienes-somos-intro .quienes-somos-img:after,
+    .quienes-somos-world .quienes-somos-img:after {
+      content: '';
+      display: block;
+      background-color: #d5f1fd;
+      inset: 0;
+      top: 3%;
+      left: 3%;
+      width: 100%;
+      height: 100%;
+      position: absolute; }
+  .programs-what .what-text,
+  .programs-what .why-text,
+  .programs-what .history-text,
+  .programs-what .quienes-somos-text,
+  .programs-what .world-text,
+  .programs-why .what-text,
+  .programs-why .why-text,
+  .programs-why .history-text,
+  .programs-why .quienes-somos-text,
+  .programs-why .world-text,
+  .quienes-somos-history .what-text,
+  .quienes-somos-history .why-text,
+  .quienes-somos-history .history-text,
+  .quienes-somos-history .quienes-somos-text,
+  .quienes-somos-history .world-text,
+  .quienes-somos-intro .what-text,
+  .quienes-somos-intro .why-text,
+  .quienes-somos-intro .history-text,
+  .quienes-somos-intro .quienes-somos-text,
+  .quienes-somos-intro .world-text,
+  .quienes-somos-world .what-text,
+  .quienes-somos-world .why-text,
+  .quienes-somos-world .history-text,
+  .quienes-somos-world .quienes-somos-text,
+  .quienes-somos-world .world-text {
+    flex-basis: 36%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 4em;
+    color: #055E5A; }
+    .programs-what .what-text h2,
+    .programs-what .why-text h2,
+    .programs-what .history-text h2,
+    .programs-what .quienes-somos-text h2,
+    .programs-what .world-text h2,
+    .programs-why .what-text h2,
+    .programs-why .why-text h2,
+    .programs-why .history-text h2,
+    .programs-why .quienes-somos-text h2,
+    .programs-why .world-text h2,
+    .quienes-somos-history .what-text h2,
+    .quienes-somos-history .why-text h2,
+    .quienes-somos-history .history-text h2,
+    .quienes-somos-history .quienes-somos-text h2,
+    .quienes-somos-history .world-text h2,
+    .quienes-somos-intro .what-text h2,
+    .quienes-somos-intro .why-text h2,
+    .quienes-somos-intro .history-text h2,
+    .quienes-somos-intro .quienes-somos-text h2,
+    .quienes-somos-intro .world-text h2,
+    .quienes-somos-world .what-text h2,
+    .quienes-somos-world .why-text h2,
+    .quienes-somos-world .history-text h2,
+    .quienes-somos-world .quienes-somos-text h2,
+    .quienes-somos-world .world-text h2 {
+      font-size: 3.3rem;
+      font-weight: 900;
+      color: #022838;
+      line-height: 45px;
+      line-height: 115%;
+      color: #055E5A; }
+      @media screen and (max-width: 850px) {
+        .programs-what .what-text h2,
+        .programs-what .why-text h2,
+        .programs-what .history-text h2,
+        .programs-what .quienes-somos-text h2,
+        .programs-what .world-text h2,
+        .programs-why .what-text h2,
+        .programs-why .why-text h2,
+        .programs-why .history-text h2,
+        .programs-why .quienes-somos-text h2,
+        .programs-why .world-text h2,
+        .quienes-somos-history .what-text h2,
+        .quienes-somos-history .why-text h2,
+        .quienes-somos-history .history-text h2,
+        .quienes-somos-history .quienes-somos-text h2,
+        .quienes-somos-history .world-text h2,
+        .quienes-somos-intro .what-text h2,
+        .quienes-somos-intro .why-text h2,
+        .quienes-somos-intro .history-text h2,
+        .quienes-somos-intro .quienes-somos-text h2,
+        .quienes-somos-intro .world-text h2,
+        .quienes-somos-world .what-text h2,
+        .quienes-somos-world .why-text h2,
+        .quienes-somos-world .history-text h2,
+        .quienes-somos-world .quienes-somos-text h2,
+        .quienes-somos-world .world-text h2 {
+          font-size: 2.3rem; } }
+    .programs-what .what-text p,
+    .programs-what .why-text p,
+    .programs-what .history-text p,
+    .programs-what .quienes-somos-text p,
+    .programs-what .world-text p,
+    .programs-why .what-text p,
+    .programs-why .why-text p,
+    .programs-why .history-text p,
+    .programs-why .quienes-somos-text p,
+    .programs-why .world-text p,
+    .quienes-somos-history .what-text p,
+    .quienes-somos-history .why-text p,
+    .quienes-somos-history .history-text p,
+    .quienes-somos-history .quienes-somos-text p,
+    .quienes-somos-history .world-text p,
+    .quienes-somos-intro .what-text p,
+    .quienes-somos-intro .why-text p,
+    .quienes-somos-intro .history-text p,
+    .quienes-somos-intro .quienes-somos-text p,
+    .quienes-somos-intro .world-text p,
+    .quienes-somos-world .what-text p,
+    .quienes-somos-world .why-text p,
+    .quienes-somos-world .history-text p,
+    .quienes-somos-world .quienes-somos-text p,
+    .quienes-somos-world .world-text p {
+      padding: .8em 0;
+      font-size: 1.6rem;
+      line-height: 115%;
+      font-weight: bold;
+      font-weight: 300; }
+      @media screen and (max-width: 850px) {
+        .programs-what .what-text p,
+        .programs-what .why-text p,
+        .programs-what .history-text p,
+        .programs-what .quienes-somos-text p,
+        .programs-what .world-text p,
+        .programs-why .what-text p,
+        .programs-why .why-text p,
+        .programs-why .history-text p,
+        .programs-why .quienes-somos-text p,
+        .programs-why .world-text p,
+        .quienes-somos-history .what-text p,
+        .quienes-somos-history .why-text p,
+        .quienes-somos-history .history-text p,
+        .quienes-somos-history .quienes-somos-text p,
+        .quienes-somos-history .world-text p,
+        .quienes-somos-intro .what-text p,
+        .quienes-somos-intro .why-text p,
+        .quienes-somos-intro .history-text p,
+        .quienes-somos-intro .quienes-somos-text p,
+        .quienes-somos-intro .world-text p,
+        .quienes-somos-world .what-text p,
+        .quienes-somos-world .why-text p,
+        .quienes-somos-world .history-text p,
+        .quienes-somos-world .quienes-somos-text p,
+        .quienes-somos-world .world-text p {
+          font-size: 1.1rem; } }
+    .programs-what .what-text ul,
+    .programs-what .why-text ul,
+    .programs-what .history-text ul,
+    .programs-what .quienes-somos-text ul,
+    .programs-what .world-text ul,
+    .programs-why .what-text ul,
+    .programs-why .why-text ul,
+    .programs-why .history-text ul,
+    .programs-why .quienes-somos-text ul,
+    .programs-why .world-text ul,
+    .quienes-somos-history .what-text ul,
+    .quienes-somos-history .why-text ul,
+    .quienes-somos-history .history-text ul,
+    .quienes-somos-history .quienes-somos-text ul,
+    .quienes-somos-history .world-text ul,
+    .quienes-somos-intro .what-text ul,
+    .quienes-somos-intro .why-text ul,
+    .quienes-somos-intro .history-text ul,
+    .quienes-somos-intro .quienes-somos-text ul,
+    .quienes-somos-intro .world-text ul,
+    .quienes-somos-world .what-text ul,
+    .quienes-somos-world .why-text ul,
+    .quienes-somos-world .history-text ul,
+    .quienes-somos-world .quienes-somos-text ul,
+    .quienes-somos-world .world-text ul {
+      display: flex;
+      flex-direction: column;
+      gap: .8em; }
+      .programs-what .what-text ul li,
+      .programs-what .why-text ul li,
+      .programs-what .history-text ul li,
+      .programs-what .quienes-somos-text ul li,
+      .programs-what .world-text ul li,
+      .programs-why .what-text ul li,
+      .programs-why .why-text ul li,
+      .programs-why .history-text ul li,
+      .programs-why .quienes-somos-text ul li,
+      .programs-why .world-text ul li,
+      .quienes-somos-history .what-text ul li,
+      .quienes-somos-history .why-text ul li,
+      .quienes-somos-history .history-text ul li,
+      .quienes-somos-history .quienes-somos-text ul li,
+      .quienes-somos-history .world-text ul li,
+      .quienes-somos-intro .what-text ul li,
+      .quienes-somos-intro .why-text ul li,
+      .quienes-somos-intro .history-text ul li,
+      .quienes-somos-intro .quienes-somos-text ul li,
+      .quienes-somos-intro .world-text ul li,
+      .quienes-somos-world .what-text ul li,
+      .quienes-somos-world .why-text ul li,
+      .quienes-somos-world .history-text ul li,
+      .quienes-somos-world .quienes-somos-text ul li,
+      .quienes-somos-world .world-text ul li {
+        font-size: 1.3rem; }
+    @media screen and (max-width: 768px) {
+      .programs-what .what-text,
+      .programs-what .why-text,
+      .programs-what .history-text,
+      .programs-what .quienes-somos-text,
+      .programs-what .world-text,
+      .programs-why .what-text,
+      .programs-why .why-text,
+      .programs-why .history-text,
+      .programs-why .quienes-somos-text,
+      .programs-why .world-text,
+      .quienes-somos-history .what-text,
+      .quienes-somos-history .why-text,
+      .quienes-somos-history .history-text,
+      .quienes-somos-history .quienes-somos-text,
+      .quienes-somos-history .world-text,
+      .quienes-somos-intro .what-text,
+      .quienes-somos-intro .why-text,
+      .quienes-somos-intro .history-text,
+      .quienes-somos-intro .quienes-somos-text,
+      .quienes-somos-intro .world-text,
+      .quienes-somos-world .what-text,
+      .quienes-somos-world .why-text,
+      .quienes-somos-world .history-text,
+      .quienes-somos-world .quienes-somos-text,
+      .quienes-somos-world .world-text {
+        flex-basis: 100%;
+        gap: 1em;
+        justify-content: center;
+        padding: 2em 0; } }
+
+.programs-why {
+  background: #FFFEF6; }
+  .programs-why .why-image img {
+    border-radius: 0 0 360px 0; }
+
+@media screen and (max-width: 768px) {
+  .reverse {
+    flex-direction: column-reverse; } }
+
+.programs-how {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 9rem;
+  background: #FFFEF6;
+  gap: 12em;
+  color: #055E5A; }
+  @media screen and (max-width: 1200px) {
+    .programs-how {
+      padding: 2rem; } }
+  @media screen and (max-width: 768px) {
+    .programs-how {
+      flex-direction: column; } }
+  .programs-how .how-half {
+    display: flex;
+    flex-direction: column; }
+    .programs-how .how-half .how-img img {
+      width: 100%;
+      max-width: 750px;
+      height: 100%;
+      display: block;
+      min-height: 600px;
+      border-radius: 0px 700px 0px 0px; }
+    .programs-how .how-half .how-list ul {
+      display: flex;
+      flex-direction: column;
+      padding: 4em 0;
+      gap: .3em;
+      max-width: 500px; }
+      .programs-how .how-half .how-list ul li {
+        font-size: 1.3rem;
+        border-bottom: 1px solid #022838;
+        padding: .8em; }
+  .programs-how .how-half-2 {
+    display: flex;
+    flex-direction: column; }
+    @media screen and (max-width: 768px) {
+      .programs-how .how-half-2 {
+        width: 100%; } }
+    .programs-how .how-half-2 .how-img {
+      padding: 2em 0 0 0; }
+      .programs-how .how-half-2 .how-img img {
+        width: 100%;
+        max-width: 400px;
+        aspect-ratio: 1/ 2;
+        height: 100%;
+        max-height: 550px;
+        object-fit: cover; }
+        @media screen and (max-width: 768px) {
+          .programs-how .how-half-2 .how-img img {
+            margin: 0 auto; } }
+    .programs-how .how-half-2 .how-text p {
+      padding: .8em 0;
+      font-size: 1.6rem;
+      line-height: 115%;
+      font-weight: bold;
+      font-weight: 300;
+      max-width: 30ch; }
+      @media screen and (max-width: 850px) {
+        .programs-how .how-half-2 .how-text p {
+          font-size: 1.1rem; } }
+      @media screen and (max-width: 768px) {
+        .programs-how .how-half-2 .how-text p {
+          max-width: 60ch; } }
+    .programs-how .how-half-2 .how-text h3 {
+      font-size: 3.3rem;
+      font-weight: 900;
+      color: #022838;
+      line-height: 45px;
+      line-height: 115%;
+      color: #055E5A; }
+      @media screen and (max-width: 850px) {
+        .programs-how .how-half-2 .how-text h3 {
+          font-size: 2.3rem; } }
+
+/** nosotros **/
+.nosotros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: right; }
+  .nosotros .nosotros-img {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    text-align: center; }
+    .nosotros .nosotros-img h1 {
+      position: absolute;
+      bottom: 68%;
+      font-size: 3.3rem;
+      font-weight: 900;
+      color: #022838;
+      line-height: 45px;
+      line-height: 115%;
+      font-size: 6vw;
+      letter-spacing: -5px;
+      color: #faf8f4; }
+      @media screen and (max-width: 850px) {
+        .nosotros .nosotros-img h1 {
+          font-size: 2.3rem; } }
+    .nosotros .nosotros-img img {
+      width: 100%;
+      max-width: 90vw;
+      object-fit: cover;
+      max-height: 70vh;
+      margin: 0 auto;
+      margin-top: 10%; }
+  .nosotros span {
+    width: 100%;
+    max-width: 90vw;
+    color: #faf8f4;
+    padding: 1em 0; }
+
+.main-quienes-somos {
+  color: #022838; }
+
+.quienes-somos-texto h3 {
+  padding: .8em 0;
+  font-size: 1.6rem;
+  line-height: 115%;
+  font-weight: bold; }
+  @media screen and (max-width: 850px) {
+    .quienes-somos-texto h3 {
+      font-size: 1.1rem; } }
+
+.quienes-somos-texto p {
+  max-width: 45ch;
+  font-size: 1.3rem;
+  padding: .8em 0;
+  font-weight: 300; }
+
+.quienes-somos-history .history-text,
+.quienes-somos-history .world-text {
+  color: #022838; }
+  .quienes-somos-history .history-text h2,
+  .quienes-somos-history .world-text h2 {
+    color: #022838;
+    text-transform: uppercase; }
+
+.quienes-somos-world {
+  background-color: #fffce7; }
+  .quienes-somos-world .world-text {
+    color: #022838; }
+    .quienes-somos-world .world-text h2 {
+      color: #022838;
+      text-transform: uppercase; }
+    .quienes-somos-world .world-text p {
+      padding: 0; }
+
+.site-footer {
+  background-color: #faf8f4;
+  padding: 2% 0; }
+  .site-footer .footer-grid {
+    display: grid;
+    grid-template-columns: 40% 20% 20% 20%;
+    max-width: 70vw;
+    margin: 0 auto;
+    gap: 3%;
+    min-height: 45vh; }
+    @media screen and (max-width: 768px) {
+      .site-footer .footer-grid {
+        grid-template-columns: 1fr;
+        place-content: start;
+        margin: 0;
+        padding: 2em; } }
+    .site-footer .footer-grid .footer-col-big {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: max-content; }
+      .site-footer .footer-grid .footer-col-big p {
+        max-width: 40ch;
+        font-size: .9rem;
+        text-align: left; }
+      .site-footer .footer-grid .footer-col-big .footer-redes {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2em;
+        padding: .5em 0;
+        width: 100%; }
+        .site-footer .footer-grid .footer-col-big .footer-redes i {
+          color: #141414;
+          font-size: 1.3rem; }
+    .site-footer .footer-grid .footer-col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; }
+      .site-footer .footer-grid .footer-col h4 {
+        padding: .8em 0;
+        font-size: 1.6rem;
+        line-height: 115%;
+        font-weight: bold; }
+        @media screen and (max-width: 850px) {
+          .site-footer .footer-grid .footer-col h4 {
+            font-size: 1.1rem; } }
+      .site-footer .footer-grid .footer-col a {
+        color: #022838; }
+  .site-footer span {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 0; }
