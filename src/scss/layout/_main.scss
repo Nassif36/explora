@@ -29,10 +29,19 @@
 
             position: absolute;
             inset: 0;
-
+            &:after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+              
+                position: absolute;
+                inset: 0;
+                background-color: #022838e3;
+            }
             video {
                 width: 100%;
-                max-width: 50vw;
+               
                 position: absolute;
                 right: 0;
                 bottom: 0;
@@ -41,6 +50,10 @@
                 display: block;
                 height: 100%;
                 object-fit: cover;
+                
+                @media screen and(min-width: 966px) {
+                     max-width: 50vw;
+                }
 
             }
         }
@@ -107,6 +120,9 @@
                 &:hover {
                     transform: scale(1.1);
                 }
+            }
+            @media screen and(max-width: 1350px) {
+                height: calc(300px + 25vh);
             }
         }
 
@@ -232,7 +248,7 @@
 
 .section-places {
     background: linear-gradient(to right, #00000098, #00000093),
-        url(../../Imágenes/Subidas/Postlaguna.JPG);
+        url(../../imagenes/subidas/Postlaguna.JPG);
     min-height: 100vh;
     padding: 3% 0 0 0;
     @include background;
@@ -362,6 +378,8 @@
 
         @media screen and(max-width: 850px) {
             flex-direction: column;
+            padding: 2em .5em;
+            gap: .3em;
         }
 
         .quote-img {
@@ -384,7 +402,7 @@
                 background-color: rgba(0, 0, 0, 0.781);
                 max-width: 550px;
                 max-height: 610px;
-                background-image: url(../../Imágenes/DSCF7626.JPG);
+                background-image: url(../../imagenes/DSCF7626.JPG);
                 @include background;
 
                 @media screen and(max-width: 850px) {
@@ -428,6 +446,18 @@
                 padding: 2em 0;
                 font-weight: 600;
                 font-size: $fontNormal;
+                
+            }
+            @media screen and(max-width: 850px) {
+                text-align: center;
+                blockquote {
+                     font-size: 1.75rem;
+                     padding: .5em;
+                }
+                span {
+                    padding: .3em 2em;
+                    align-self: center;
+                }
             }
         }
     }

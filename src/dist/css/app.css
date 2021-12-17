@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -117,7 +116,7 @@ span {
     background-color: #022838; }
   .site-header.programas {
     background-color: #b4b4b4;
-    background: linear-gradient(to bottom, #00000088, #fffffff8), url("/src/Imágenes/DSCF7626.JPG");
+    background: linear-gradient(to bottom, #00000088, #181818f8), url("https://images.pexels.com/photos/3193767/pexels-photo-3193767.jpeg?cs=srgb&dl=pexels-mati-mango-3193767.jpg&fm=jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; }
@@ -281,9 +280,16 @@ span {
       flex-basis: 50%;
       position: absolute;
       inset: 0; }
+      .site-hero .site-hero-flex .hero-video:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        inset: 0;
+        background-color: #022838e3; }
       .site-hero .site-hero-flex .hero-video video {
         width: 100%;
-        max-width: 50vw;
         position: absolute;
         right: 0;
         bottom: 0;
@@ -291,6 +297,9 @@ span {
         display: block;
         height: 100%;
         object-fit: cover; }
+        @media screen and (min-width: 966px) {
+          .site-hero .site-hero-flex .hero-video video {
+            max-width: 50vw; } }
 
 .site-main {
   background-color: #faf8f4;
@@ -344,6 +353,9 @@ span {
         object-fit: cover; }
         .site-main .card-experiencia .experiencia-img img:hover {
           transform: scale(1.1); }
+      @media screen and (max-width: 1350px) {
+        .site-main .card-experiencia .experiencia-img {
+          height: calc(300px + 25vh); } }
     .site-main .card-experiencia .experiencia-text {
       color: #022838; }
       .site-main .card-experiencia .experiencia-text p {
@@ -439,7 +451,7 @@ span {
           font-size: 1.3rem; }
 
 .section-places {
-  background: linear-gradient(to right, #00000098, #00000093), url(../../Imágenes/Subidas/Postlaguna.JPG);
+  background: linear-gradient(to right, #00000098, #00000093), url(../../imagenes/subidas/Postlaguna.JPG);
   min-height: 100vh;
   padding: 3% 0 0 0;
   background-size: cover;
@@ -538,7 +550,9 @@ span {
     margin: 0 auto; }
     @media screen and (max-width: 850px) {
       .section-quote .quote-flex {
-        flex-direction: column; } }
+        flex-direction: column;
+        padding: 2em .5em;
+        gap: .3em; } }
     .section-quote .quote-flex .quote-img {
       display: flex;
       align-items: center;
@@ -558,7 +572,7 @@ span {
         background-color: rgba(0, 0, 0, 0.781);
         max-width: 550px;
         max-height: 610px;
-        background-image: url(../../Imágenes/DSCF7626.JPG);
+        background-image: url(../../imagenes/DSCF7626.JPG);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center; }
@@ -593,6 +607,15 @@ span {
         padding: 2em 0;
         font-weight: 600;
         font-size: 1.3rem; }
+      @media screen and (max-width: 850px) {
+        .section-quote .quote-flex .quote-text {
+          text-align: center; }
+          .section-quote .quote-flex .quote-text blockquote {
+            font-size: 1.75rem;
+            padding: .5em; }
+          .section-quote .quote-flex .quote-text span {
+            padding: .3em 2em;
+            align-self: center; } }
 
 .box {
   transform-style: preserve-3d; }
