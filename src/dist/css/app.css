@@ -597,60 +597,66 @@ span {
 .box {
   transform-style: preserve-3d; }
 
-.section-contact .contact-flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  min-height: 80vh; }
-  @media screen and (max-width: 1050px) {
-    .section-contact .contact-flex {
-      flex-direction: column; } }
-  .section-contact .contact-flex .contact-form {
-    flex: 1 1 60%;
-    background-color: #faf8f4;
-    padding: 2em; }
-    .section-contact .contact-flex .contact-form form {
+.section-contact {
+  border-bottom: 2px solid white; }
+  .section-contact .contact-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 80vh; }
+    @media screen and (max-width: 1050px) {
+      .section-contact .contact-flex {
+        flex-direction: column; } }
+    .section-contact .contact-flex h1 {
+      text-align: center;
       width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      margin: 0 auto; }
-      .section-contact .contact-flex .contact-form form .campo {
+      padding: 2em .5em; }
+    .section-contact .contact-flex .contact-form {
+      flex: 1 1 60%;
+      background-color: #faf8f4;
+      padding: 2em; }
+      .section-contact .contact-flex .contact-form form {
+        width: 100%;
         display: flex;
         flex-direction: column;
-        box-shadow: 12px 21px 22px #0000001c;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        margin: 0 auto; }
+        .section-contact .contact-flex .contact-form form .campo {
+          display: flex;
+          flex-direction: column;
+          box-shadow: 12px 21px 22px #0000001c;
+          width: 100%;
+          max-width: 550px;
+          margin: .5em;
+          gap: .2em; }
+          .section-contact .contact-flex .contact-form form .campo input, .section-contact .contact-flex .contact-form form .campo textarea {
+            box-shadow: 2px 2px 2px #0000000a;
+            padding: .8em .3em;
+            border-radius: 3px;
+            resize: none;
+            border-bottom: 1px solid #0000004f; }
+      .section-contact .contact-flex .contact-form .campo-btn {
         width: 100%;
         max-width: 550px;
-        margin: .5em;
-        gap: .2em; }
-        .section-contact .contact-flex .contact-form form .campo input, .section-contact .contact-flex .contact-form form .campo textarea {
-          box-shadow: 2px 2px 2px #0000000a;
-          padding: .8em .3em;
-          border-radius: 3px;
-          resize: none;
-          border-bottom: 1px solid #0000004f; }
-    .section-contact .contact-flex .contact-form .campo-btn {
-      width: 100%;
-      max-width: 550px;
-      margin: .6em; }
-      .section-contact .contact-flex .contact-form .campo-btn .btn-enviar {
-        align-self: flex-start;
-        background-color: #022838;
-        color: #FFFEF6;
-        transition: all .4s ease;
-        border: 2px solid transparent;
-        padding: .8em 2.5em; }
-        .section-contact .contact-flex .contact-form .campo-btn .btn-enviar:hover {
-          border-color: #022838;
-          color: #022838;
-          background-color: transparent; }
-  .section-contact .contact-flex .contact-img {
-    flex: 1 1 50%; }
-    .section-contact .contact-flex .contact-img img {
-      width: 100%;
-      object-fit: cover; }
+        margin: .6em; }
+        .section-contact .contact-flex .contact-form .campo-btn .btn-enviar {
+          align-self: flex-start;
+          background-color: #022838;
+          color: #FFFEF6;
+          transition: all .4s ease;
+          border: 2px solid transparent;
+          padding: .8em 2.5em; }
+          .section-contact .contact-flex .contact-form .campo-btn .btn-enviar:hover {
+            border-color: #022838;
+            color: #022838;
+            background-color: transparent; }
+    .section-contact .contact-flex .contact-img {
+      flex: 1 1 50%; }
+      .section-contact .contact-flex .contact-img img {
+        width: 100%;
+        object-fit: cover; }
 
 .site-footer {
   background-color: #faf8f4;
