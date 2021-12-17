@@ -280,14 +280,15 @@ span {
       flex-basis: 50%;
       position: absolute;
       inset: 0; }
-      .site-hero .site-hero-flex .hero-video:after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        inset: 0;
-        background-color: #022838e3; }
+      @media screen and (max-width: 966px) {
+        .site-hero .site-hero-flex .hero-video:after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          inset: 0;
+          background-color: #022838e3; } }
       .site-hero .site-hero-flex .hero-video video {
         width: 100%;
         position: absolute;
