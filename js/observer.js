@@ -42,7 +42,7 @@ var texts = document.querySelectorAll(".mask-up");
 const appearTextOptions = {
     root: null,
 
-    rootMargin: "0px 0px -30px 0px"
+    rootMargin: "0px 0px 20px 0px"
 };
 
 
