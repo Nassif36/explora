@@ -59,5 +59,9 @@
         justify-content: center;
         align-items: center;
         padding: 5% 0;
+        @media screen and(max-width: 850px) {
+            text-align: center;
+            padding: 9% 1% .5em 1%;
+        }
     }
 }

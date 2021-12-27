@@ -96,6 +96,9 @@ span {
   transition: all 1.2s ease; }
   .mask-up.appear {
     transform: translateY(0); }
+  @media screen and (max-width: 768px) {
+    .mask-up {
+      transition: all .4s ease; } }
 
 .line {
   position: relative;
@@ -738,3 +741,7 @@ span {
     justify-content: center;
     align-items: center;
     padding: 5% 0; }
+    @media screen and (max-width: 850px) {
+      .site-footer span {
+        text-align: center;
+        padding: 9% 1% .5em 1%; } }
