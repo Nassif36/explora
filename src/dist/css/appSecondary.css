@@ -149,9 +149,10 @@ span {
   top: 0;
   transition: all .8s ease;
   z-index: 10;
+  background-color: #022838;
   padding: 0 6.2%; }
   .site-navigation .logo {
-    padding: 4em 0; }
+    padding: 1em 0; }
     .site-navigation .logo .logo-img {
       display: block;
       width: 55px;

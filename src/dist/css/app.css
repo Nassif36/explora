@@ -149,9 +149,10 @@ span {
   top: 0;
   transition: all .8s ease;
   z-index: 10;
+  background-color: #022838;
   padding: 0 6.2%; }
   .site-navigation .logo {
-    padding: 4em 0; }
+    padding: 1em 0; }
     .site-navigation .logo .logo-img {
       display: block;
       width: 55px;
@@ -340,7 +341,7 @@ span {
     align-items: center;
     width: 100%;
     max-height: 1150px;
-    border-radius: 500px 500px 0 0; }
+    border-radius: 3px; }
     .site-main .card-experiencia:nth-of-type(1).from-down.appear {
       transition-delay: 130ms; }
     .site-main .card-experiencia:nth-of-type(2).from-down.appear {
@@ -350,7 +351,7 @@ span {
     .site-main .card-experiencia .experiencia-img {
       overflow: hidden;
       height: 650px;
-      border-radius: 500px 500px 0 0; }
+      border-radius: 3px; }
       .site-main .card-experiencia .experiencia-img img {
         transition: transform .3s ease;
         width: 100%;
