@@ -573,7 +573,7 @@ span {
         right: 10%;
         top: 8%;
         bottom: 0;
-        border-radius: 0 0 0 40%;
+        border-radius: 0 0 0 6px;
         background-color: rgba(0, 0, 0, 0.781);
         max-width: 550px;
         max-height: 610px;
