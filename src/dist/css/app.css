@@ -116,7 +116,7 @@ span {
   min-height: 100vh;
   position: relative; }
   .site-header.home {
-    background-color: #022331; }
+    background-color: #3164a3; }
   .site-header.programas {
     background-color: #b4b4b4;
     background: linear-gradient(to bottom, #00000088, #181818f8), url("https://images.pexels.com/photos/3193767/pexels-photo-3193767.jpeg?cs=srgb&dl=pexels-mati-mango-3193767.jpg&fm=jpg");
@@ -124,7 +124,7 @@ span {
     background-repeat: no-repeat;
     background-position: center; }
   .site-header.nosotros {
-    background-color: #022331; }
+    background-color: #021d29; }
 
 .btn-outline {
   width: 100%;
@@ -174,7 +174,7 @@ span {
         color: black; }
       .site-navigation.nav-scrolled .navigation-links li .btn-white {
         color: #faf8f4;
-        background-color: #022331; }
+        background-color: #3164a3; }
   .site-navigation .navigation-links {
     display: flex;
     flex-direction: row;
@@ -196,7 +196,7 @@ span {
           position: fixed;
           inset: 0;
           padding: 13%;
-          background-color: #022331;
+          background-color: #3164a3;
           gap: 2em; }
           .site-navigation .navigation-links.modal li a {
             font-weight: 900;
@@ -279,8 +279,18 @@ span {
       z-index: 4; }
     .site-hero .site-hero-flex .hero-video {
       flex-basis: 50%;
+      width: 50vw;
+      background-image: url(/src/img/explora-1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
       position: absolute;
-      inset: 0; }
+      background-position: right;
+      inset: 0;
+      margin-left: auto; }
+      @media screen and (max-width: 966px) {
+        .site-hero .site-hero-flex .hero-video {
+          width: 100vw;
+          background-position: center; } }
       @media screen and (max-width: 966px) {
         .site-hero .site-hero-flex .hero-video:after {
           content: '';
@@ -290,18 +300,6 @@ span {
           position: absolute;
           inset: 0;
           background-color: #022838e3; } }
-      .site-hero .site-hero-flex .hero-video video {
-        width: 100%;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        top: 0;
-        display: block;
-        height: 100%;
-        object-fit: cover; }
-        @media screen and (min-width: 966px) {
-          .site-hero .site-hero-flex .hero-video video {
-            max-width: 50vw; } }
 
 .site-main {
   background-color: #faf8f4;
@@ -312,7 +310,7 @@ span {
       text-align: center;
       font-size: 3.3rem;
       font-weight: 900;
-      color: #022331;
+      color: #021d29;
       line-height: 45px;
       line-height: 115%;
       max-width: 20ch;
@@ -338,6 +336,9 @@ span {
     align-items: center;
     width: 100%;
     border-radius: 3px; }
+    @media screen and (max-width: 850px) {
+      .site-main .card-experiencia {
+        height: max-content; } }
     .site-main .card-experiencia:nth-of-type(1).from-down.appear {
       transition-delay: 130ms; }
     .site-main .card-experiencia:nth-of-type(2).from-down.appear {
@@ -348,6 +349,7 @@ span {
       overflow: hidden;
       display: flex;
       flex: 0 1 50%;
+      width: 100%;
       border-radius: 3px; }
       .site-main .card-experiencia .experiencia-img img {
         transition: transform .3s ease;
@@ -360,7 +362,7 @@ span {
         .site-main .card-experiencia .experiencia-img {
           height: calc(300px + 25vh); } }
     .site-main .card-experiencia .experiencia-text {
-      color: #022331; }
+      color: #021d29; }
       .site-main .card-experiencia .experiencia-text p {
         padding: .8em 0;
         font-size: 1.3rem;
@@ -378,7 +380,7 @@ span {
   .section-news .news-circle {
     width: 530px;
     height: 530px;
-    background-color: #022331;
+    background-color: #3164a3;
     display: block;
     border-radius: 100%;
     position: absolute;
@@ -397,7 +399,7 @@ span {
     .section-news .news-grid .news-text h2 {
       font-size: 3.3rem;
       font-weight: 900;
-      color: #022331;
+      color: #021d29;
       line-height: 45px;
       line-height: 115%; }
       @media screen and (max-width: 850px) {
@@ -425,7 +427,7 @@ span {
       left: 38%;
       font-size: 1.8rem;
       font-weight: 900;
-      color: #022331;
+      color: #021d29;
       line-height: 45px;
       line-height: 115%; }
       .section-news .news-grid .news-text .trabajando-desde h3 {
@@ -519,7 +521,7 @@ span {
       justify-content: center; }
       .section-quote .quote-flex .quote-text blockquote {
         max-width: 25ch;
-        color: #022331;
+        color: #021d29;
         line-height: 1.1;
         font-weight: 900;
         font-size: 2.25rem; }
@@ -587,14 +589,14 @@ span {
         margin: .6em; }
         .section-contact .contact-flex .contact-form .campo-btn .btn-enviar {
           align-self: flex-start;
-          background-color: #022331;
+          background-color: #021d29;
           color: #cfd3d5;
           transition: all .4s ease;
           border: 2px solid transparent;
           padding: .8em 2.5em; }
           .section-contact .contact-flex .contact-form .campo-btn .btn-enviar:hover {
-            border-color: #022331;
-            color: #022331;
+            border-color: #021d29;
+            color: #021d29;
             background-color: transparent; }
     .section-contact .contact-flex .contact-img {
       flex: 1 1 50%; }
@@ -650,7 +652,7 @@ span {
           .site-footer .footer-grid .footer-col h4 {
             font-size: 1.1rem; } }
       .site-footer .footer-grid .footer-col a {
-        color: #022331; }
+        color: #021d29; }
   .site-footer span {
     display: flex;
     flex-direction: row;

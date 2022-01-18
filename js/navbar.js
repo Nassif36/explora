@@ -9,14 +9,14 @@ window.onscroll = function () {
 
     if (prevScrollpos > currentScrollPos ) {
         barraFixed.style.top = "0";
-        barraFixed.style.background = "#022838";
+        barraFixed.style.background = "#3164a3";
         barraFixed.classList.add('fixed')
 
     } else {
         barraFixed.style.top = "-54vh";
     } 
      if(currentScrollPos >= 5) {
-        barraFixed.style.background = "#022838";
+        barraFixed.style.background = "#3164a3";
 
     } else {
         barraFixed.style.background = "transparent";

@@ -116,7 +116,7 @@ span {
   min-height: 100vh;
   position: relative; }
   .site-header.home {
-    background-color: #022331; }
+    background-color: #3164a3; }
   .site-header.programas {
     background-color: #b4b4b4;
     background: linear-gradient(to bottom, #00000088, #181818f8), url("https://images.pexels.com/photos/3193767/pexels-photo-3193767.jpeg?cs=srgb&dl=pexels-mati-mango-3193767.jpg&fm=jpg");
@@ -124,7 +124,7 @@ span {
     background-repeat: no-repeat;
     background-position: center; }
   .site-header.nosotros {
-    background-color: #022331; }
+    background-color: #021d29; }
 
 .btn-outline {
   width: 100%;
@@ -174,7 +174,7 @@ span {
         color: black; }
       .site-navigation.nav-scrolled .navigation-links li .btn-white {
         color: #faf8f4;
-        background-color: #022331; }
+        background-color: #3164a3; }
   .site-navigation .navigation-links {
     display: flex;
     flex-direction: row;
@@ -196,7 +196,7 @@ span {
           position: fixed;
           inset: 0;
           padding: 13%;
-          background-color: #022331;
+          background-color: #3164a3;
           gap: 2em; }
           .site-navigation .navigation-links.modal li a {
             font-weight: 900;
@@ -286,7 +286,7 @@ span {
       max-width: 25ch;
       font-size: 3.3rem;
       font-weight: 900;
-      color: #022331;
+      color: #021d29;
       line-height: 45px;
       line-height: 115%;
       color: #055E5A;
@@ -452,7 +452,7 @@ span {
     .quienes-somos-world .quienes-somos-img:after {
       content: '';
       display: block;
-      background-color: #ceeffd;
+      background-color: #c7ecfc;
       inset: 0;
       top: 3%;
       left: 3%;
@@ -518,7 +518,7 @@ span {
     .quienes-somos-world .world-text h2 {
       font-size: 3.3rem;
       font-weight: 900;
-      color: #022331;
+      color: #021d29;
       line-height: 45px;
       line-height: 115%;
       color: #055E5A; }
@@ -733,7 +733,7 @@ span {
       max-width: 500px; }
       .programs-how .how-half .how-list ul li {
         font-size: 1.3rem;
-        border-bottom: 1px solid #022331;
+        border-bottom: 1px solid #021d29;
         padding: .8em; }
   .programs-how .how-half-2 {
     display: flex;
@@ -769,7 +769,7 @@ span {
     .programs-how .how-half-2 .how-text h3 {
       font-size: 3.3rem;
       font-weight: 900;
-      color: #022331;
+      color: #021d29;
       line-height: 45px;
       line-height: 115%;
       color: #055E5A; }
@@ -797,7 +797,7 @@ span {
       bottom: 68%;
       font-size: 3.3rem;
       font-weight: 900;
-      color: #022331;
+      color: #021d29;
       line-height: 45px;
       line-height: 115%;
       font-size: 6vw;
@@ -820,7 +820,7 @@ span {
     padding: 1em 0; }
 
 .main-quienes-somos {
-  color: #022331; }
+  color: #021d29; }
 
 .quienes-somos-texto h3 {
   padding: .8em 0;
@@ -839,18 +839,18 @@ span {
 
 .quienes-somos-history .history-text,
 .quienes-somos-history .world-text {
-  color: #022331; }
+  color: #021d29; }
   .quienes-somos-history .history-text h2,
   .quienes-somos-history .world-text h2 {
-    color: #022331;
+    color: #021d29;
     text-transform: uppercase; }
 
 .quienes-somos-world {
   background-color: #c7ccce; }
   .quienes-somos-world .world-text {
-    color: #022331; }
+    color: #021d29; }
     .quienes-somos-world .world-text h2 {
-      color: #022331;
+      color: #021d29;
       text-transform: uppercase; }
     .quienes-somos-world .world-text p {
       padding: 0; }
@@ -903,7 +903,7 @@ span {
           .site-footer .footer-grid .footer-col h4 {
             font-size: 1.1rem; } }
       .site-footer .footer-grid .footer-col a {
-        color: #022331; }
+        color: #021d29; }
   .site-footer span {
     display: flex;
     flex-direction: row;
