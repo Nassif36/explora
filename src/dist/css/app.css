@@ -26,8 +26,7 @@ input,
 button,
 textarea {
   border: none;
-  outline: none;
-  cursor: pointer; }
+  outline: none; }
 
 button {
   padding: .9rem 1.7rem;
@@ -35,6 +34,7 @@ button {
   justify-content: center;
   align-items: center;
   max-width: max-content;
+  cursor: pointer;
   font-weight: 600;
   font-size: .9rem; }
 
@@ -337,7 +337,6 @@ span {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-height: 1150px;
     border-radius: 3px; }
     .site-main .card-experiencia:nth-of-type(1).from-down.appear {
       transition-delay: 130ms; }
@@ -347,11 +346,13 @@ span {
       transition-delay: 470ms; }
     .site-main .card-experiencia .experiencia-img {
       overflow: hidden;
-      height: 650px;
+      display: flex;
+      flex: 0 1 50%;
       border-radius: 3px; }
       .site-main .card-experiencia .experiencia-img img {
         transition: transform .3s ease;
         width: 100%;
+        display: block;
         object-fit: cover; }
         .site-main .card-experiencia .experiencia-img img:hover {
           transform: scale(1.1); }
@@ -388,7 +389,6 @@ span {
         display: none; } }
   .section-news .news-grid {
     display: grid;
-    min-height: 100vh;
     grid-template-columns: 65% 35%;
     position: relative; }
     @media screen and (max-width: 850px) {
@@ -408,26 +408,30 @@ span {
       font-size: 1.3rem; }
     .section-news .news-grid .news-text .news-img img {
       width: 100%;
-      max-width: 57vw;
-      max-height: 720px;
-      border-radius: 0% 0% 0% 90%;
-      padding: calc(20px + 1vw) 0 0 0; }
+      max-width: 54vw;
+      max-height: 500px;
+      border-radius: 3px;
+      padding: calc(20px + 1vw) 0 0 0;
+      object-fit: cover; }
       @media screen and (max-width: 850px) {
         .section-news .news-grid .news-text .news-img img {
           max-width: 100%;
           max-height: 350px; } }
     .section-news .news-grid .news-text .trabajando-desde {
       position: absolute;
-      top: 59%;
+      top: 65%;
       bottom: 0;
       right: 0;
       left: 38%;
-      text-shadow: 3px 3px 3px #faf8f4;
       font-size: 1.8rem;
       font-weight: 900;
       color: #022331;
       line-height: 45px;
       line-height: 115%; }
+      .section-news .news-grid .news-text .trabajando-desde h3 {
+        background-color: #ffffffab;
+        max-width: max-content;
+        padding: .2em; }
       @media screen and (max-width: 850px) {
         .section-news .news-grid .news-text .trabajando-desde {
           font-size: 1.3rem; } }
@@ -451,93 +455,6 @@ span {
         gap: .8em; }
         .section-news .news-grid .news-ul ul li {
           font-size: 1.3rem; }
-
-.section-places {
-  background: linear-gradient(to right, #00000098, #00000093), url(../../imagenes/subidas/Postlaguna.JPG);
-  min-height: 100vh;
-  padding: 3% 0 0 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center; }
-  .section-places .places-title {
-    color: #faf8f4;
-    padding: 1% 0 0 0; }
-    .section-places .places-title h3 {
-      font-size: 3.3rem;
-      font-weight: 900;
-      color: #022331;
-      line-height: 45px;
-      line-height: 115%;
-      color: #faf8f4; }
-      @media screen and (max-width: 850px) {
-        .section-places .places-title h3 {
-          font-size: 2.3rem; } }
-    .section-places .places-title p {
-      padding: .8em 0;
-      font-size: 1.6rem;
-      line-height: 115%;
-      font-weight: bold; }
-      @media screen and (max-width: 850px) {
-        .section-places .places-title p {
-          font-size: 1.1rem; } }
-  .section-places .swiper {
-    width: 100%;
-    height: 100%;
-    padding: 3% 0 3% 5%; }
-    @media screen and (max-width: 600px) {
-      .section-places .swiper {
-        padding: 2% 2em; } }
-  .section-places .place-card {
-    transition: all .5s ease; }
-    .section-places .place-card:nth-child(1) {
-      transition-delay: 130ms; }
-      .section-places .place-card:nth-child(1) img {
-        border-radius: 90px 0 0 0; }
-    .section-places .place-card:nth-child(2) img {
-      border-radius: 0 0 0 90px; }
-    .section-places .place-card:nth-child(3) img {
-      border-radius: 0 90px 0 0; }
-    .section-places .place-card:nth-child(4) img {
-      border-radius: 0 0 90px 0; }
-    .section-places .place-card:nth-child(5) img {
-      border-radius: 90px 0 0 0; }
-    .section-places .place-card:nth-child(6) img {
-      border-radius: 0 0 0 90px; }
-    .section-places .place-card:hover {
-      transform: scale(1.04);
-      cursor: pointer; }
-      .section-places .place-card:hover .place-title h4 {
-        transform: translateX(-6px) scale(1.06); }
-    .section-places .place-card .place-img {
-      position: relative; }
-      .section-places .place-card .place-img img {
-        max-width: 430px;
-        object-fit: cover;
-        aspect-ratio: 1 / 2;
-        max-height: 550px; }
-        @media screen and (max-width: 600px) {
-          .section-places .place-card .place-img img {
-            max-width: 100%;
-            max-height: 480px; } }
-    .section-places .place-card .place-title h4 {
-      transition: all .5s ease;
-      font-size: 1.8rem;
-      font-weight: 900;
-      color: #022331;
-      line-height: 45px;
-      line-height: 115%;
-      color: #faf8f4;
-      position: absolute;
-      top: 84%;
-      left: -4%; }
-      @media screen and (max-width: 850px) {
-        .section-places .place-card .place-title h4 {
-          font-size: 1.3rem; } }
-      @media screen and (max-width: 600px) {
-        .section-places .place-card .place-title h4 {
-          right: 0;
-          top: 90%;
-          left: 2%; } }
 
 .section-quote {
   background-color: #EDD8D8;
@@ -567,7 +484,7 @@ span {
         width: 90%;
         margin: auto;
         position: absolute;
-        right: 10%;
+        right: 15%;
         top: 8%;
         bottom: 0;
         border-radius: 0 0 0 6px;
@@ -575,6 +492,7 @@ span {
         max-width: 550px;
         max-height: 610px;
         background-image: url(../../imagenes/DSCF7626.JPG);
+        opacity: .6;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center; }
@@ -587,7 +505,8 @@ span {
         display: block;
         height: 100%;
         max-height: 600px;
-        border-radius: 0% 40% 0% 40%;
+        object-fit: cover;
+        border-radius: 3px;
         position: relative;
         z-index: 3; }
         @media screen and (max-width: 850px) {
