@@ -4,13 +4,13 @@
 
     .footer-grid {
         display: grid;
-        grid-template-columns: 40% 20% 20% 20%;
+        grid-template-columns: 50% 25% 25%;
 
         max-width: 70vw;
         margin: 0 auto;
         gap: 3%;
-        min-height: 45vh;
-        @media screen and(max-width: 768px) {
+       
+        @media screen and(max-width: 850px) {
             grid-template-columns: 1fr;
             place-content: start;
             margin: 0;
@@ -18,10 +18,13 @@
         }
         .footer-col-big {
             @include flex(column);
-            align-items: center;
-            justify-content: center;
-            max-width: max-content;
-
+         
+            .footer-logo {
+                img {
+                    width: 100%;
+                    max-width:200px;
+                }
+            }
             p {
                 max-width: 40ch;
                 font-size: .9rem;
