@@ -116,7 +116,7 @@ span {
   min-height: 100vh;
   position: relative; }
   .site-header.home {
-    background-color: #022838; }
+    background-color: #022331; }
   .site-header.programas {
     background-color: #b4b4b4;
     background: linear-gradient(to bottom, #00000088, #181818f8), url("https://images.pexels.com/photos/3193767/pexels-photo-3193767.jpeg?cs=srgb&dl=pexels-mati-mango-3193767.jpg&fm=jpg");
@@ -124,7 +124,7 @@ span {
     background-repeat: no-repeat;
     background-position: center; }
   .site-header.nosotros {
-    background-color: #022838; }
+    background-color: #022331; }
 
 .btn-outline {
   width: 100%;
@@ -149,16 +149,13 @@ span {
   top: 0;
   transition: all .8s ease;
   z-index: 10;
-  background-color: #022838;
   padding: 0 6.2%; }
   .site-navigation .logo {
     padding: 1em 0; }
-    .site-navigation .logo .logo-img {
-      display: block;
-      width: 55px;
-      height: 55px;
-      background-color: #fffafad7;
-      border-radius: 33px; }
+    .site-navigation .logo .logo-img img {
+      width: 100%;
+      max-width: 120px;
+      filter: invert(100%); }
     .site-navigation .logo .open-btn {
       display: none; }
   .site-navigation.fixed {
@@ -177,7 +174,7 @@ span {
         color: black; }
       .site-navigation.nav-scrolled .navigation-links li .btn-white {
         color: #faf8f4;
-        background-color: #022838; }
+        background-color: #022331; }
   .site-navigation .navigation-links {
     display: flex;
     flex-direction: row;
@@ -199,7 +196,7 @@ span {
           position: fixed;
           inset: 0;
           padding: 13%;
-          background-color: #022838;
+          background-color: #022331;
           gap: 2em; }
           .site-navigation .navigation-links.modal li a {
             font-weight: 900;
@@ -315,7 +312,7 @@ span {
       text-align: center;
       font-size: 3.3rem;
       font-weight: 900;
-      color: #022838;
+      color: #022331;
       line-height: 45px;
       line-height: 115%;
       max-width: 20ch;
@@ -362,7 +359,7 @@ span {
         .site-main .card-experiencia .experiencia-img {
           height: calc(300px + 25vh); } }
     .site-main .card-experiencia .experiencia-text {
-      color: #022838; }
+      color: #022331; }
       .site-main .card-experiencia .experiencia-text p {
         padding: .8em 0;
         font-size: 1.3rem;
@@ -380,7 +377,7 @@ span {
   .section-news .news-circle {
     width: 530px;
     height: 530px;
-    background-color: #022838;
+    background-color: #022331;
     display: block;
     border-radius: 100%;
     position: absolute;
@@ -400,7 +397,7 @@ span {
     .section-news .news-grid .news-text h2 {
       font-size: 3.3rem;
       font-weight: 900;
-      color: #022838;
+      color: #022331;
       line-height: 45px;
       line-height: 115%; }
       @media screen and (max-width: 850px) {
@@ -428,7 +425,7 @@ span {
       text-shadow: 3px 3px 3px #faf8f4;
       font-size: 1.8rem;
       font-weight: 900;
-      color: #022838;
+      color: #022331;
       line-height: 45px;
       line-height: 115%; }
       @media screen and (max-width: 850px) {
@@ -468,7 +465,7 @@ span {
     .section-places .places-title h3 {
       font-size: 3.3rem;
       font-weight: 900;
-      color: #022838;
+      color: #022331;
       line-height: 45px;
       line-height: 115%;
       color: #faf8f4; }
@@ -526,7 +523,7 @@ span {
       transition: all .5s ease;
       font-size: 1.8rem;
       font-weight: 900;
-      color: #022838;
+      color: #022331;
       line-height: 45px;
       line-height: 115%;
       color: #faf8f4;
@@ -603,7 +600,7 @@ span {
       justify-content: center; }
       .section-quote .quote-flex .quote-text blockquote {
         max-width: 25ch;
-        color: #022838;
+        color: #022331;
         line-height: 1.1;
         font-weight: 900;
         font-size: 2.25rem; }
@@ -671,14 +668,14 @@ span {
         margin: .6em; }
         .section-contact .contact-flex .contact-form .campo-btn .btn-enviar {
           align-self: flex-start;
-          background-color: #022838;
-          color: #FFFEF6;
+          background-color: #022331;
+          color: #cfd3d5;
           transition: all .4s ease;
           border: 2px solid transparent;
           padding: .8em 2.5em; }
           .section-contact .contact-flex .contact-form .campo-btn .btn-enviar:hover {
-            border-color: #022838;
-            color: #022838;
+            border-color: #022331;
+            color: #022331;
             background-color: transparent; }
     .section-contact .contact-flex .contact-img {
       flex: 1 1 50%; }
@@ -735,7 +732,7 @@ span {
           .site-footer .footer-grid .footer-col h4 {
             font-size: 1.1rem; } }
       .site-footer .footer-grid .footer-col a {
-        color: #022838; }
+        color: #022331; }
   .site-footer span {
     display: flex;
     flex-direction: row;
