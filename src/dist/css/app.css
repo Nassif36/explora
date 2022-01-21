@@ -116,7 +116,13 @@ span {
   min-height: 100vh;
   position: relative; }
   .site-header.home {
-    background-color: #3164a3; }
+    background: linear-gradient(to right, #3164a3da 50%, #3164a350 0), url(/src/img/explora-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left; }
+    @media screen and (max-width: 1050px) {
+      .site-header.home {
+        background: linear-gradient(to right, #3164a3da 50%, #3164a3da 0), url(/src/img/explora-1.jpg); } }
   .site-header.programas {
     background-color: #b4b4b4;
     background: linear-gradient(to bottom, #00000088, #181818f8), url("https://images.pexels.com/photos/3193767/pexels-photo-3193767.jpeg?cs=srgb&dl=pexels-mati-mango-3193767.jpg&fm=jpg");
@@ -125,6 +131,27 @@ span {
     background-position: center; }
   .site-header.nosotros {
     background-color: #021d29; }
+
+.site-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0; }
+  .site-hero .site-hero-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh; }
+    .site-hero .site-hero-flex .hero-frase {
+      padding: 9% 3% 0 6%;
+      color: #faf8f4;
+      position: relative;
+      z-index: 4; }
 
 .btn-outline {
   width: 100%;
@@ -257,50 +284,6 @@ span {
   border: 6px solid transparent;
   border-radius: 1px; }
 
-.site-hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0; }
-  .site-hero .site-hero-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh; }
-    .site-hero .site-hero-flex .hero-frase {
-      padding: 0 6% 6% 6%;
-      color: #faf8f4;
-      position: relative;
-      z-index: 4; }
-    .site-hero .site-hero-flex .hero-video {
-      flex-basis: 50%;
-      width: 50vw;
-      background-image: url(/src/img/explora-1.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: absolute;
-      background-position: right;
-      inset: 0;
-      margin-left: auto; }
-      @media screen and (max-width: 966px) {
-        .site-hero .site-hero-flex .hero-video {
-          width: 100vw;
-          background-position: center; } }
-      @media screen and (max-width: 966px) {
-        .site-hero .site-hero-flex .hero-video:after {
-          content: '';
-          display: block;
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          inset: 0;
-          background-color: #022838e3; } }
-
 .site-main {
   background-color: #faf8f4;
   padding: calc(20px + 1vw) 0; }
@@ -373,7 +356,7 @@ span {
         line-height: 139%; }
 
 .section-news {
-  padding: calc(10rem + 1vw) 20px;
+  padding: calc(20px + 1vw);
   min-height: 100vh;
   position: relative;
   overflow-x: hidden; }
@@ -459,8 +442,8 @@ span {
           font-size: 1.3rem; }
 
 .section-quote {
-  background-color: #EDD8D8;
-  padding: 3% 0;
+  background-color: #cfd3d5;
+  padding: calc(20px + 1vw);
   overflow: hidden; }
   .section-quote .quote-flex {
     display: flex;

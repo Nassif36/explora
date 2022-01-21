@@ -53,9 +53,7 @@
                     <h1>nadie puede descubrir el mundo por vos</h1>
                    
                 </div>
-                <div class="hero-video">
-                  
-                </div>
+              
             </div>
         </article>
     </header>
@@ -232,7 +230,7 @@
              
             <div class="contact-form" id="contacto">
                 
-                <form action="#">
+                <form id="my-form" action="https://formspree.io/f/xjvjnvov" method="POST">
                     <h1>
                         START YOUR JOURNEY
                     </h1>
@@ -253,16 +251,17 @@
                         <input type="email" name="email">
                     </div>
                     <div class="campo">
-                        <label for="email">Mensaje</label>
-                        <input type="email" name="email">
+                        <label for="mensaje">Mensaje</label>
+                        <input type="text" name="mensaje">
                     </div>
                     <div class="campo">
-                        <label for="email">Nombre de la escuela</label>
-                        <textarea name="mensaje"></textarea>
+                        <label for="escuela">Nombre de la escuela</label>
+                        <textarea name="escuela"></textarea>
                     </div>
-                   <div class="campo-btn">
-                        <button class="btn-enviar">Enviar</button>
+                   <div class="campo-btn" >
+                        <button class="btn-enviar" id="my-form-button">Enviar</button>
                    </div>
+                     <p id="my-form-status"></p>
                 </form>
             </div>
              <div class="contact-img">
