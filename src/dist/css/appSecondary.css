@@ -116,13 +116,13 @@ span {
   min-height: 100vh;
   position: relative; }
   .site-header.home {
-    background: linear-gradient(to right, #3164a3da 50%, #3164a350 0), url(/src/img/explora-1.jpg);
+    background: linear-gradient(to right, #3164a3da 50%, #3164a350 0), url("/src/img/explora-1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left; }
     @media screen and (max-width: 1050px) {
       .site-header.home {
-        background: linear-gradient(to right, #3164a3da 50%, #3164a3da 0), url(/src/img/explora-1.jpg); } }
+        background: linear-gradient(to right, #3164a3da 50%, #3164a3da 0), url("/src/img/explora-1.jpg"); } }
   .site-header.programas {
     background-color: #b4b4b4;
     background: linear-gradient(to bottom, #00000088, #181818f8), url("https://images.pexels.com/photos/3193767/pexels-photo-3193767.jpeg?cs=srgb&dl=pexels-mati-mango-3193767.jpg&fm=jpg");
