@@ -80,11 +80,13 @@
                 font-size: $fontNormal;
                 line-height: 115%;
                 font-weight: bold;
+                text-align: center;
             }
 
             span {
                 font-size: $fontNormal;
                 line-height: 139%;
+                text-align: justify;
             }
         }
     }

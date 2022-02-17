@@ -350,10 +350,12 @@ span {
         padding: .8em 0;
         font-size: 1.3rem;
         line-height: 115%;
-        font-weight: bold; }
+        font-weight: bold;
+        text-align: center; }
       .site-main .card-experiencia .experiencia-text span {
         font-size: 1.3rem;
-        line-height: 139%; }
+        line-height: 139%;
+        text-align: justify; }
 
 .section-news {
   padding: calc(20px + 1vw);
