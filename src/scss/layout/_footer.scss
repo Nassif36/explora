@@ -1,6 +1,6 @@
 .site-footer {
     background-color: $white;
-    padding: 2% 0;
+    padding: 4% 0 0 0;
 
     .footer-grid {
         display: grid;
@@ -61,7 +61,7 @@
         @include flex(row);
         justify-content: center;
         align-items: center;
-        padding: 5% 0;
+        padding: 1% 0;
         @media screen and(max-width: 850px) {
             text-align: center;
             padding: 9% 1% .5em 1%;

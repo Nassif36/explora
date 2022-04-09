@@ -177,18 +177,14 @@ span {
   transition: all .8s ease;
   z-index: 10;
   padding: 0 6.2%; }
-  .site-navigation .logo {
-    padding: 1em 0; }
-    .site-navigation .logo .logo-img img {
-      width: 100%;
-      max-width: 121px;
-      filter: invert(100%); }
-    .site-navigation .logo .open-btn {
-      display: none; }
+  .site-navigation .logo .logo-img img {
+    width: 100%;
+    max-width: 121px;
+    filter: invert(100%); }
+  .site-navigation .logo .open-btn {
+    display: none; }
   .site-navigation.fixed {
     padding: 0 6.2%; }
-    .site-navigation.fixed .logo {
-      padding: 1em 0; }
   .site-navigation.nav-scrolled {
     top: 0;
     margin: 0;
@@ -296,6 +292,9 @@ span {
     @media screen and (max-width: 1050px) {
       .programs h1 {
         letter-spacing: normal; } }
+
+section {
+  min-height: 100vh; }
 
 .main-programs .programs-intro {
   display: flex;
@@ -454,8 +453,8 @@ span {
     .quienes-somos-world .world-img img {
       border-radius: 3px;
       width: 100%;
-      max-height: 850px;
-      max-width: 660px;
+      max-height: 700px;
+      max-width: 600px;
       aspect-ratio: 2 / 3;
       object-fit: cover; }
   .programs-what .quienes-somos-img,
@@ -482,9 +481,11 @@ span {
       background-color: #c7ecfc;
       inset: 0;
       top: 3%;
-      left: 3%;
+      left: 0;
+      right: 0;
       width: 100%;
       height: 100%;
+      max-width: 600px;
       position: absolute; }
   .programs-what .what-text,
   .programs-what .why-text,
@@ -516,7 +517,7 @@ span {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 4em;
+    gap: 2em;
     color: #055E5A; }
     .programs-what .what-text h2,
     .programs-what .why-text h2,
@@ -884,7 +885,7 @@ span {
 
 .site-footer {
   background-color: #faf8f4;
-  padding: 2% 0; }
+  padding: 4% 0 0 0; }
   .site-footer .footer-grid {
     display: grid;
     grid-template-columns: 50% 25% 25%;
@@ -936,7 +937,7 @@ span {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 5% 0; }
+    padding: 1% 0; }
     @media screen and (max-width: 850px) {
       .site-footer span {
         text-align: center;
