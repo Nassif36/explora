@@ -4,13 +4,13 @@
     position: relative;
     &.home {
          background: linear-gradient(to right, #3164a3da 50%, #3164a350 0),
-         url('/src/imgagenes/explora-1.jpg');
+         url('/src/imagenes/explora-1.jpg');
         background-repeat: no-repeat;
          background-size: cover;
          background-position: left;
          @media screen and(max-width: 1050px) {
              background: linear-gradient(to right, #3164a3da 50%, #3164a3da 0),
-             url('/src/imgagenes/explora-1.jpg');
+             url('/src/imagenes/explora-1.jpg');
          }
     }
 

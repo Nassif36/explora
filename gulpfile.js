@@ -8,7 +8,7 @@ const bundleSass = () => {
     return src('src/scss/*.scss')
 
     .pipe(compileSass().once('error', compileSass.logError ))
-    .pipe(dest('src/dist/css/'));
+    .pipe(dest('src/css/'));
 };
 
 function minificarcss() {
@@ -17,7 +17,7 @@ function minificarcss() {
         .pipe(compileSass({
             outputStyle: 'compressed'
         }))
-        .pipe(dest('src/dist/css'))
+        .pipe(dest('src/css'))
 };
 
 const devWatch = () => {
